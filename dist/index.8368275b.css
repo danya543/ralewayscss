@@ -64,11 +64,13 @@ body {
 }
 
 .ourcustomers {
+  width: 100vw;
   margin-top: 50px;
 }
 
 .ourcustomers__customers {
   width: 90%;
+  height: 370px;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 83px;
@@ -78,8 +80,11 @@ body {
 
 .ourcustomers__customers__costomer {
   width: 31%;
-  height: 368px;
+  height: 85%;
   box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
 }
 
 .ourcustomers__customers__customer__block {
@@ -123,7 +128,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 46px;
+  display: flex;
+}
+
+.ourcustomers__customers__costomer__man__inf {
+  height: 70px;
+  flex-direction: column;
+  justify-content: space-between;
   display: flex;
 }
 
@@ -158,7 +169,7 @@ span {
 .tabs {
   width: 100vw;
   height: 540px;
-  margin-left: 10%;
+  margin-left: 7%;
 }
 
 .tabs__left {
@@ -263,12 +274,16 @@ span {
 }
 
 .tabs__img {
-  width: 470px;
+  width: 32%;
   height: 499px;
-  background: url("tabs.282e0055.svg") no-repeat;
   border: 1px solid #c6cbcd;
   border-left: 0;
   margin: -501px 0 0 52%;
+}
+
+.tabs__img img {
+  width: 100%;
+  height: 100%;
 }
 
 .awesome {
@@ -339,7 +354,7 @@ span {
   color: #fff;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0 0 170px;
+  padding-top: 50px;
   font-family: Raleway;
   font-style: normal;
   font-weight: 400;
@@ -355,7 +370,7 @@ span {
 }
 
 .button {
-  width: 370px;
+  width: 25%;
   height: 58px;
   text-transform: capitalize;
   color: #fff;
@@ -406,6 +421,7 @@ span {
 .options .option .head_part .name {
   text-transform: capitalize;
   height: 60px;
+  box-sizing: border-box;
   border: 2px solid #f5f5f5;
   justify-content: center;
   align-items: center;
@@ -417,6 +433,7 @@ span {
 
 .options .option .head_part .price {
   height: 100px;
+  box-sizing: border-box;
   border: 2px solid #f5f5f5;
   justify-content: center;
   align-items: center;
@@ -426,6 +443,7 @@ span {
 .options .option .head_part .free {
   color: #ffffff80;
   height: 50px;
+  box-sizing: border-box;
   border: 2px solid #f5f5f5;
   justify-content: center;
   align-items: center;
@@ -512,7 +530,7 @@ nav div {
 }
 
 .input {
-  width: 27%;
+  width: 32%;
   height: 450px;
   background: #fff;
   border-radius: 10px;
@@ -676,46 +694,58 @@ nav div {
   display: flex;
 }
 
-.input_area {
+.contact {
+  width: 100vw;
+  height: 670px;
+}
+
+.contact .form {
+  height: 410px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.contact .form .input_area {
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 30px;
   margin-top: 75px;
   display: flex;
 }
 
-.input_area div {
-  width: 570px;
+.contact .form .input_area div {
+  width: 39%;
   height: 225px;
   flex-direction: column;
   justify-content: space-between;
   display: flex;
 }
 
-.input_area input {
+.contact .form .input_area div input {
   width: 100%;
   height: 50px;
   border: 0;
   border-bottom: 1px solid #bdbdbd;
 }
 
-textarea {
-  width: 570px;
+.contact .form .input_area textarea {
+  width: 39%;
   height: 225px;
   border: 0;
   border-bottom: 1px solid #bdbdbd;
 }
 
-.contact button {
-  width: 370px;
+.contact .form button {
+  width: 25%;
   height: 58px;
   text-align: center;
   text-transform: capitalize;
   color: #fff;
   background: #ec7979;
   border: 0;
-  margin: 50px 0 50px 400px;
   font-family: Open Sans;
   font-size: 18px;
   font-style: normal;
@@ -730,8 +760,6 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-left: -170px;
-  padding: 30px 0;
   display: flex;
 }
 
@@ -747,21 +775,23 @@ footer p {
   display: flex;
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
-  body, header, .main, .inf_main, .social, .priceoption, .design {
-    margin-left: 0;
-  }
+.radio {
+  display: none;
+}
 
+@media (max-width: 1024px) and (orientation: landscape) {
   .all_header {
-    width: 1024px;
     font-size: 24px;
     line-height: 28px;
   }
 
   .all_p {
-    width: 1024px;
     font-size: 14px;
     line-height: 16px;
+  }
+
+  .main {
+    padding-left: 0;
   }
 
   .inf_soc {
@@ -793,14 +823,14 @@ footer p {
     margin-right: 0;
   }
 
+  .input span {
+    margin-top: -5px;
+  }
+
   .input_h1 {
     width: 300px;
     font-size: 18px;
     line-height: 25px;
-  }
-
-  .input span {
-    margin-top: -5px;
   }
 
   nav {
@@ -812,11 +842,14 @@ footer p {
   }
 
   .tabs__left {
+    height: 430px;
     padding-left: 85px;
   }
 
   .tabs__left__inf {
     height: 390px;
+    width: 93%;
+    padding-left: 0;
   }
 
   .tabs__left__buttons {
@@ -825,13 +858,14 @@ footer p {
 
   .tabs__left__inf__h1 {
     width: 97%;
+    padding: 24px 0;
     font-size: 24px;
     font-weight: 700;
     line-height: 33px;
   }
 
   .tabs__left__inf__p {
-    width: 85%;
+    width: 95%;
     height: 150px;
     font-size: 14px;
     font-weight: 400;
@@ -844,57 +878,55 @@ footer p {
   }
 
   .tabs__img {
-    width: 317px;
-    height: 389px;
-    margin: -391px 0 0 559px;
+    width: 36%;
+    height: 388px;
+    margin: -390px 0 0 54%;
   }
 
-  .awesome {
-    margin-left: 16px;
-  }
-
-  .awesome__blocks__block1__h1 {
-    width: 320px;
+  .awesome__blocks .block h1 {
     font-size: 18px;
     line-height: 25px;
   }
 
-  .awesome__blocks__block1__p {
-    width: 320px;
+  .awesome__blocks .block p {
     font-size: 14px;
     line-height: 16px;
   }
 
-  .awesome__blocks__block2__h1 {
-    width: 320px;
-    font-size: 18px;
-    line-height: 25px;
+  .awesome__blocks .block .icon {
+    width: 80px;
+    height: 80px;
   }
 
-  .awesome__blocks__block2__p {
-    width: 320px;
-    font-size: 14px;
-    line-height: 16px;
+  .awesome__blocks .block .icon img {
+    width: 75%;
+    height: 75%;
   }
 
-  .awesome__blocks__block3__h1 {
-    width: 320px;
-    font-size: 18px;
-    line-height: 25px;
+  .options .option {
+    height: 450px;
   }
 
-  .awesome__blocks__block3__p {
-    width: 320px;
-    font-size: 14px;
-    line-height: 16px;
+  .options .option .head_part .name {
+    height: 52px;
   }
 
-  .awesome__blocks__block2 {
-    margin-left: 320px;
+  .options .option .head_part .price {
+    height: 90px;
   }
 
-  .awesome__blocks__block3 {
-    margin-left: 640px;
+  .options .option .head_part .free, .options .option .space {
+    height: 45px;
+  }
+
+  .ourcustomers__customers__customer__block {
+    width: 100%;
+    height: 180px;
+  }
+
+  .ourcustomers__customers__customer__block:after {
+    top: 180px;
+    left: 50px;
   }
 
   .ourcustomers__customers__costomer__block__p {
@@ -907,43 +939,22 @@ footer p {
     line-height: 25px;
   }
 
-  .button {
-    width: 315px;
-  }
-
-  .contact {
-    width: 97vw;
-    margin-left: 16px;
-  }
-
-  .contact button {
-    width: 320px;
-    margin-left: 340px;
-  }
-
-  footer {
-    margin-left: 0;
-  }
-
-  .design {
-    height: 360px;
-  }
-
   .inf_design {
     padding-top: 20px;
-    padding-left: 40px;
   }
 
-  .inf_design button {
-    margin-top: 30px;
+  footer .socials img {
+    width: 30px;
+    height: 30px;
+  }
+
+  footer p {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
 @media (max-width: 320px) and (orientation: portrait) {
-  body, header, .main, .inf_main, .social, .priceoption, .design, footer {
-    margin-left: 0;
-  }
-
   footer {
     height: 165px;
     padding: 0;
@@ -963,10 +974,21 @@ footer p {
 
   .main {
     flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0;
   }
 
   .inf_main {
+    width: 95%;
     margin-top: 85px;
+  }
+
+  .inf_main h1 {
+    width: 290px;
+    height: 170px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 42px;
   }
 
   .inf_main h1:before {
@@ -976,14 +998,6 @@ footer p {
   .inf_main h1:after {
     width: 135px;
     left: 93px;
-  }
-
-  .inf_main h1 {
-    width: 290px;
-    height: 170px;
-    text-align: center;
-    font-size: 36px;
-    line-height: 42px;
   }
 
   .inf_main p {
@@ -999,9 +1013,9 @@ footer p {
   }
 
   .input {
-    width: 288px;
+    width: 95%;
     height: 381px;
-    margin-left: 103px;
+    margin-right: 0;
   }
 
   .input_h1 {
@@ -1016,15 +1030,16 @@ footer p {
   .social {
     height: 240px;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
 
-  .inf_soc {
+  .social .inf_soc {
+    width: 100%;
     margin-top: 30px;
     margin-left: 0;
   }
 
-  .inf_soc h1 {
+  .social .inf_soc h1 {
     width: 290px;
     height: 25px;
     padding-left: 85px;
@@ -1032,14 +1047,14 @@ footer p {
     line-height: 25px;
   }
 
-  .inf_soc p {
+  .social .inf_soc p {
     text-align: center;
     width: 273px;
     height: 50px;
   }
 
   .socials {
-    width: 290px;
+    width: 90%;
     height: 26px;
   }
 
@@ -1057,23 +1072,26 @@ footer p {
   }
 
   .tabs__left {
-    width: 290px;
+    width: 90%;
     height: 430px;
     padding-left: 0;
   }
 
+  .tabs__left__buttons {
+    width: 100%;
+  }
+
   .tabs__left__inf {
+    width: 287px;
     height: 390px;
     border-right: 1px solid #c6cbcd;
-    padding-left: 25px;
+    padding-left: 11px;
   }
 
   .tabs__left__inf__h1 {
     width: 243px;
-    height: 112px;
     text-align: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 36px 0;
     font-size: 18px;
     line-height: 25px;
   }
@@ -1082,6 +1100,7 @@ footer p {
     text-align: center;
     width: 250px;
     height: 180px;
+    margin-bottom: 0;
     font-size: 13px;
     line-height: 15px;
   }
@@ -1089,6 +1108,15 @@ footer p {
   .tabs__left__inf__button {
     width: 243px;
     margin-top: 20px;
+  }
+
+  .tabs__left__buttons__p2 {
+    width: 36%;
+  }
+
+  .tabs__left__buttons__p3 {
+    width: 34%;
+    margin-left: 66%;
   }
 
   .all_header {
@@ -1108,155 +1136,141 @@ footer p {
   }
 
   .awesome {
-    height: 1400px;
+    height: 1290px;
   }
 
   .awesome__blocks {
+    height: 1050px;
     flex-direction: column;
+    justify-content: space-around;
+    margin: 50px 0 0;
     display: flex;
   }
 
-  .awesome__blocks__block1 {
-    margin: 0;
+  .awesome__blocks .block {
+    width: 100%;
   }
 
-  .awesome__blocks__block1__icon {
-    margin-left: 109px;
-  }
-
-  .awesome__blocks__block1__h1 {
-    width: 288px;
+  .awesome__blocks .block h1 {
+    width: 100%;
     font-size: 18px;
     line-height: 25px;
   }
 
-  .awesome__blocks__block1__p {
-    width: 288px;
+  .awesome__blocks .block p {
+    width: 95%;
     font-size: 14px;
     line-height: 16px;
-  }
-
-  .awesome__blocks__block2 {
-    margin: 30px 0 0;
-  }
-
-  .awesome__blocks__block2__icon {
-    margin-left: 109px;
-  }
-
-  .awesome__blocks__block2__h1 {
-    width: 288px;
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  .awesome__blocks__block2__p {
-    width: 288px;
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  .awesome__blocks__block3 {
-    margin: 30px 0 0;
-  }
-
-  .awesome__blocks__block3__icon {
-    margin-left: 109px;
-  }
-
-  .awesome__blocks__block3__h1 {
-    width: 288px;
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  .awesome__blocks__block3__p {
-    width: 288px;
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  .wrap {
-    padding: 0;
   }
 
   .priceoption {
-    height: 1725px;
+    height: 1560px;
   }
 
-  .options {
-    height: 1400px;
+  .priceoption .options {
+    width: 95%;
+    height: 1310px;
     flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
 
-  .option {
+  .priceoption .options .option {
     height: 400px;
     width: 100%;
   }
 
-  .space {
+  .priceoption .options .option .head_part .name {
+    height: 47px;
+  }
+
+  .priceoption .options .option .head_part .price {
+    height: 78px;
+  }
+
+  .priceoption .options .option .head_part .free {
     height: 40px;
   }
 
+  .priceoption .options .option .space {
+    height: 39px;
+  }
+
   .ourcustomers {
-    height: 1600px;
+    height: 1170px;
   }
 
   .ourcustomers__customers {
+    height: 880px;
+    width: 100%;
     flex-direction: column;
+    align-items: center;
+    margin: 30px 0 0;
+  }
+
+  .ourcustomers__customers__costomer {
+    width: 95%;
+    height: 265px;
   }
 
   .ourcustomers__customers__customer__block {
-    height: 270px;
-    width: 288px;
-    margin-left: 9px;
+    width: 90%;
+    height: 180px;
+  }
+
+  .ourcustomers__customers__customer__block:after {
+    top: 180px;
+    left: 50px;
+  }
+
+  .ourcustomers__customers__costomer__man__inf {
+    height: 50px;
+  }
+
+  .design {
+    height: 360px;
   }
 
   .inf_design {
-    padding-left: 0;
+    padding: 20px 0 0;
   }
 
   .inf_design button {
     width: 279px;
   }
 
-  .input_area {
-    width: 288px;
+  .contact {
+    height: 850px;
+  }
+
+  .contact .form {
+    height: 635px;
+  }
+
+  .contact .form .input_area {
+    width: 90%;
     flex-direction: column;
   }
 
-  .input_area div, textarea {
+  .contact .form .input_area div {
     width: 290px;
     margin-left: 5px;
   }
 
-  .contact button {
+  .contact .form .input_area textarea {
     width: 290px;
+    height: 190px;
+    margin-left: 5px;
+  }
+
+  .contact .form button {
+    width: 90%;
     height: 50px;
-    margin-left: 5px;
   }
 
-  .tabs__left {
-    margin-left: 9px;
-  }
-
-  .tabs__left__buttons {
-    width: 288px;
-    margin-left: 0;
-  }
-
-  .tabs__left__buttons__p1 {
-    width: 99px;
-  }
-
-  .tabs__left__buttons__p2 {
-    width: 99px;
-    margin-left: 100px;
-  }
-
-  .tabs__left__buttons__p3 {
-    width: 99px;
-    margin-left: 190px;
+  footer p {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
